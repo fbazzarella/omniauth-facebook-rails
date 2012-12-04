@@ -26,3 +26,7 @@ load 'rails/tasks/engine.rake'
 
 
 Bundler::GemHelper.install_tasks
+
+task :default => [:"db:migrate", "app:db:test:clone"] do
+  system 'bundle exec rspec spec'
+end
