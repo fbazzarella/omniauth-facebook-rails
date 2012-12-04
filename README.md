@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/Helabs/omniauth-facebook-rails.png)](https://travis-ci.org/Helabs/omniauth-facebook-rails)
+
 ##omniauth-facebook-rails
 This gem speeds up omniauth-facebook setup in Rails apps.
 
