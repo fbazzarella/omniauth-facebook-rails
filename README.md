@@ -17,6 +17,22 @@ export FACEBOOK_APP_KEY=123456
 export FACEBOOK_APP_SECRET=abcdef
 ```
 
+Move the migration files:
+
+```
+rake omniauth_facebook:setup
+```
+
+Then, migrate then:
+
+```
+rake db:migrate
+```
+
+It will add the fields to your users table if it already exists,
+otherwise it will create it.
+
+
 It is heavily recommended for you to change railsties order in
 `config/application.rb`:
 
