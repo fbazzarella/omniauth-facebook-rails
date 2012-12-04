@@ -33,6 +33,6 @@ class AddFacebookOmniauthFields < ActiveRecord::Migration
     t.string   "email"
     t.string   "photo_url"
     t.string   "access_token"
-    t.string   "extra"
+    t.text   "extra"
   end
 end
