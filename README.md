@@ -23,7 +23,7 @@ Move the migration files:
 rake omniauth_facebook:setup
 ```
 
-Then, migrate then:
+Then, migrate them:
 
 ```
 rake db:migrate
