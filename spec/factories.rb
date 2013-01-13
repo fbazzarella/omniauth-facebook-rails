@@ -1,3 +1,3 @@
 FactoryGirl.define do
-  factory :user
+  factory :omniauth_user, class: "User"
 end

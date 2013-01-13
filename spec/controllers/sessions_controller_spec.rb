@@ -8,7 +8,7 @@ describe SessionsController do
       get :create, provider: 'facebook'
     end
     before(:each) do
-      @user = FactoryGirl.create(:user, :provider => 'facebook', :uid => '100003045769261')
+      @user = FactoryGirl.create(:omniauth_user, :provider => 'facebook', :uid => '100003045769261')
       request.env["omniauth.auth"] = {"provider"=>"facebook", "uid"=>"100003045769261", "credentials"=>{"token"=>"AAADvZADZBnlLABAMVZAUX1s7ptC0m9HZCaaIkMw8AMxFBtV3uZCmjflQDKba5PPt3kqZAgVlmZCeA6tXAUaBlLEInggas8lAGIzXzP4azfrsgZDZD"}, "info"=>{"nickname"=>nil, "email"=>"contato@startupdev.com.br", "first_name"=>"Dejurema", "last_name"=>"Jockifort", "name"=>"Dejurema Jockifort", "image"=>"http://graph.facebook.com/100003045769261/picture?type=square", "urls"=>{"Facebook"=>"http://www.facebook.com/profile.php?id=100003045769261", "Website"=>nil}}, "extra"=>{"user_hash"=>{"id"=>"100003045769261", "name"=>"Dejurema Jockifort", "first_name"=>"Dejurema", "last_name"=>"Jockifort", "link"=>"http://www.facebook.com/profile.php?id=100003045769261", "gender"=>"male", "email"=>"contato@startupdev.com.br", "timezone"=>-2, "locale"=>"pt_BR", "updated_time"=>"2011-10-18T15:01:20+0000"}}}
     end
     it "should set user id on session" do
