@@ -20,7 +20,7 @@ ActiveRecord::Schema.define(:version => 20121204171957) do
     t.string   "email"
     t.string   "photo_url"
     t.string   "access_token"
-    t.string   "extra"
+    t.text     "extra"
     t.datetime "created_at",   :null => false
     t.datetime "updated_at",   :null => false
   end

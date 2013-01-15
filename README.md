@@ -42,6 +42,14 @@ config.railties_order = [OmniauthFacebookRails::Engine, :main_app, :all]
 
 Otherwise, your `User` model won't load the Engine's  `User` model.
 
+To extend User model, create a new user.rb file in your rails app model folder.
+
+```ruby
+class User < OmniauthFacebookRails::User
+end 
+```
+
+
 ##Features/Problems
 * It is in Portuguese.
 * You only are granted access to the person's  email.
@@ -53,6 +61,12 @@ Otherwise, your `User` model won't load the Engine's  `User` model.
 3. Commit your changes (`git commit -am 'Added some feature'`)
 4. Push to the branch (`git push origin my-new-feature`)
 5. Create new Pull Request
+
+### Running specs
+
+1. $ bundle install
+2. $ bundle exec rake app:db:test:prepare
+3. $ rspec spec
 
 ## License
 This project is released under the [MIT
