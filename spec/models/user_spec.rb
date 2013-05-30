@@ -24,7 +24,7 @@ describe User do
       end
     end
     context "user already exists" do
-      let!(:existing_user) { FactoryGirl.create(:omniauth_user, :name => "My old name", :email => "my@old.me", :provider => "facebook", :uid => "123456")}
+      let!(:existing_user) { create(:omniauth_user, :name => "My old name", :email => "my@old.me", :provider => "facebook", :uid => "123456")}
       describe "finding existing user" do
         it "should find" do
           User.find_or_create_with_omniauth(auth).should == existing_user
